@@ -15,17 +15,24 @@ var stbx = {
   f: '#008a00',
   i: 3
 
-};
+},
 
-var loop = function(){
+debug = true,
+i = 0,
+maxI = 720,
+loop = function () {
 
-requestAnimationFrame(loop);
+    requestAnimationFrame(loop);
 
-stbx.a += Math.PI /180;
-//stbx.x += 0.01;
+    stbx.a = Math.PI * 2 / maxI * i;
 
-C.cls();
-C.dBX(stbx,true);
+    C.cls();
+    C.dBX(stbx, debug);
+
+    i += 1;
+    if (i === maxI) {
+        i = 0;
+    }
 
 };
 
