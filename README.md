@@ -12,7 +12,7 @@ So I worked out my own standard when it comes to working with projects that pret
 // mf standard box
 var stbx = {
 
-  x: 160, //x,y, width,height,halfWidth, halfHeight.
+  x: 160, // x,y, width,height,halfWidth, halfHeight.
   y: 120,
   w: 160,
   h: 160,
@@ -60,13 +60,36 @@ The above code will help make the 'standard box' rotate.
 
 ## The methods
 
-### C.cls()
+### C.cls(style)
 
 just a clear screen method
+
+```js
+C.cls('#808080');
+```
 
 ### C.dBX(stbx, debug)
 
 Draw the given standard box to the canvas.
+
+```js
+C.dBX({
+
+x:10, // x,y, width,height,halfWidth, halfHeight.
+y:15,
+w:32,
+h:32,
+hw:16,
+hh:16,
+a:0,   // rotation angle
+
+// formating
+s: '#080808', // stroke style
+f: '#008a00', // fill style
+i: 3
+
+}, true);
+```
 
 ### C.drawInfo(messArray, x, y, dy, font, style)
 
