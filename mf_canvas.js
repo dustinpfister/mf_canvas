@@ -21,6 +21,12 @@ var C = (function () {
 
         },
 
+        hiDraw : function (draw) {
+
+            draw.call(this, ctx, canvas)
+
+        },
+
         drawInfo : function (messArray, x, y, dy, font, style) {
 
             x = x || 10;

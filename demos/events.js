@@ -24,7 +24,17 @@ loop = function () {
 
     C.cls();
     C.dBX(stbx, debug);
+/*
+    C.hiDraw(function (ctx, canvas) {
 
+        this.cls('#ffffff');
+
+        // do anything with the context
+        ctx.fillStyle = '#ff0000';
+        ctx.fillRect(0, 0, canvas.width / 2, canvas.height / 2);
+
+    });
+*/
 };
 
 C.canvas.addEventListener('click', function (e) {

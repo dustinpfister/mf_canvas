@@ -97,6 +97,22 @@ C.canvas.addEventListener('click', function (e) {
 });
 ```
 
+### hiDraw
+
+A high order function that gives me the context, and canvas to play with when called for
+
+```js
+C.hiDraw(function (ctx, canvas) {
+
+    this.cls('#ffffff');
+
+    // do anything with the context
+    ctx.fillStyle = '#ff0000';
+    ctx.fillRect(0, 0, canvas.width / 2, canvas.height / 2);
+
+});
+```
+
 ## The props
 
 C.canvas
