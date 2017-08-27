@@ -14,9 +14,9 @@ var C = (function () {
         // ref to canvas if needed
         canvas : canvas,
 
-        cls : function () {
+        cls : function (style) {
 
-            ctx.fillStyle = '#000000';
+            ctx.fillStyle = style || '#000000';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         },

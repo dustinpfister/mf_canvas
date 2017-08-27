@@ -31,17 +31,20 @@ C.canvas.addEventListener('click', function (e) {
 
     var pt = C.boxRel(e);
 
-    console.log(pt[0].x+','+ pt[0].y);
+    console.log(pt[0].x + ',' + pt[0].y);
 
+    stbx.x = pt[0].x;
+
+    stbx.y = pt[0].y;
 });
 
 /*
 C.canvas.addEventListener('touchstart', function (e) {
 
-    var pt = C.boxRel(e);
+var pt = C.boxRel(e);
 
-    console.log(pt[0].x, pt[0].y);
+console.log(pt[0].x, pt[0].y);
 });
-*/
+ */
 
 loop();
