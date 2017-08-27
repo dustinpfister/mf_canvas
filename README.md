@@ -97,9 +97,9 @@ C.canvas.addEventListener('click', function (e) {
 });
 ```
 
-### hiDraw
+### C.hiDraw(draw)
 
-A high order function that gives me the context, and canvas to play with when called for
+A high order function that gives me the context, and canvas to play with when called for. The method given will have the ctx, and canvas given to it by argument in (ctx,canvas) order, the this keyword will also ref the public API.
 
 ```js
 C.hiDraw(function (ctx, canvas) {
