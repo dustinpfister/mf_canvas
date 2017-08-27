@@ -21,6 +21,24 @@ var C = (function () {
 
         },
 
+        drawInfo : function (messArray, x, y, dy, font, style) {
+
+            x = x || 10;
+            y = y || 10;
+            dy = dy || 15;
+            font = font || '15px courier';
+            style = style || '#ffffff';
+
+            ctx.fillStyle = style;
+            ctx.font = font;
+            messArray.forEach(function (mess, i) {
+
+                ctx.fillText(mess, x, y + dy * i);
+
+            });
+
+        },
+
         // draw debug overay for a 'standard_box'
         dBX_debug : function (obj) {
 
@@ -41,6 +59,12 @@ var C = (function () {
             ctx.stroke();
 
             ctx.restore();
+
+            this.drawInfo([
+
+                    'x: ' + obj.x
+
+                ], obj.x - obj.hw, obj.y - obj.hh);
 
         },
 
