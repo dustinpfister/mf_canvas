@@ -11,7 +11,7 @@ var stbx = {
   a: 0,
   
   // formating
-  s: '#ffffff',
+  s: '#080808',
   f: '#008a00',
   i: 3
 
@@ -22,6 +22,7 @@ var loop = function(){
 requestAnimationFrame(loop);
 
 stbx.a += Math.PI /180;
+//stbx.x += 0.01;
 
 C.cls();
 C.dBX(stbx,true);

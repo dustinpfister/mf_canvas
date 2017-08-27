@@ -62,7 +62,10 @@ var C = (function () {
 
             this.drawInfo([
 
-                    'x: ' + obj.x
+                    'box info: ',
+                    'x,y : ' + Math.floor(obj.x) + ',' + Math.floor(obj.y),
+                    'w,h : ' + obj.w + ',' + obj.h,
+                    'a : ' + obj.a.toFixed(2)
 
                 ], obj.x - obj.hw, obj.y - obj.hh);
 
