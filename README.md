@@ -70,4 +70,4 @@ just a clear screen method
 
 C.canvas
 
-just a reference to the single canvas
+Just a reference to the single canvas I made sure to put this in so that if something comes up that presents a need to get to it, it's there. However if I end up using it a lot that is a good indication that I need to develop this more.
