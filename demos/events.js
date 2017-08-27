@@ -18,22 +18,30 @@ var stbx = {
 };
 
 var debug = true,
-i = 0,
-maxI = 720,
 loop = function () {
 
     requestAnimationFrame(loop);
 
-    stbx.a = Math.PI * 2 / maxI * i;
-
     C.cls();
     C.dBX(stbx, debug);
 
-    i += 1;
-    if (i === maxI) {
-        i = 0;
-    }
-
 };
+
+C.canvas.addEventListener('click', function (e) {
+
+    var pt = C.boxRel(e);
+
+    console.log(pt[0].x+','+ pt[0].y);
+
+});
+
+/*
+C.canvas.addEventListener('touchstart', function (e) {
+
+    var pt = C.boxRel(e);
+
+    console.log(pt[0].x, pt[0].y);
+});
+*/
 
 loop();

@@ -129,6 +129,43 @@ var C = (function () {
 
             ctx.restore();
 
+        },
+
+        boxRel : function (e) {
+
+            var points = [],
+            bx = e.target.getBoundingClientRect();
+
+            // if touch event
+            if (e.touches) {
+
+                [].forEach.call(e.touches, function (touch) {
+
+                    points.push({
+
+                        x : touch.clientX - bx.left,
+                        y : touch.clientY - bx.top
+
+                    });
+
+                });
+
+            } else {
+
+                // else assume mouse
+
+                points = [{
+
+                        x : e.clientX - bx.left,
+                        y : e.clientY - bx.top
+
+                    }
+                ];
+
+            }
+
+            return points;
+
         }
 
     };

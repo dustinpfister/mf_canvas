@@ -60,11 +60,42 @@ The above code will help make the 'standard box' rotate.
 
 ## The methods
 
-### C.cls();
+### C.cls()
 
 just a clear screen method
 
 ### C.dBX(stbx, debug)
+
+Draw the given standard box to the canvas.
+
+### C.drawInfo(messArray, x, y, dy, font, style)
+
+draw info to the canvas
+
+```js
+C.drawInfo([
+
+    'box info: ',
+    'x,y : ' + Math.floor(obj.x) + ',' + Math.floor(obj.y),
+    'w,h : ' + obj.w + ',' + obj.h,
+    'a : ' + obj.a.toFixed(2)
+
+], obj.x - obj.hw, obj.y - obj.hh);
+```
+
+### C.boxRel(e)
+
+Give back an array of points that are relative to the canvas, and not the browser window.
+
+```js
+C.canvas.addEventListener('click', function (e) {
+
+    var pt = C.boxRel(e);
+
+    console.log(pt[0].x+','+ pt[0].y);
+
+});
+```
 
 ## The props
 
