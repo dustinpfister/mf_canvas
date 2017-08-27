@@ -2,6 +2,8 @@
 
 I am tried of writing the same things over, and over again when it comes to working things out in canvas vanilla js style. So I made this.
 
+The project is just a simple, but effective canvas solution that appends a single canvas to the body of the html document that I am using it in. Nothing fancy like layering or what not, I might make something more interesting for my mf projects, but don't hold you breath.
+
 ## Standard box
 
 So I worked out my own standard when it comes to working with projects that pretty much just have to do with simple box areas with in my "mf" line of projects. Say hello to the "mf standard box", it looks like this.
@@ -55,3 +57,17 @@ loop = function () {
 loop();
 ```
 The above code will help make the 'standard box' rotate.
+
+## The methods
+
+### C.cls();
+
+just a clear screen method
+
+### C.dBX(stbx, debug)
+
+## The props
+
+C.canvas
+
+just a reference to the single canvas
