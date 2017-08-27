@@ -99,7 +99,7 @@ var C = (function () {
 
         },
 
-        // draw an 'mf_standard_disp_box'
+        // draw standard drawing
         dDr : function (obj) {
 
             ctx.fillStyle = obj.f;

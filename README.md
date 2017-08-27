@@ -28,6 +28,30 @@ var stbx = {
 };
 ```
 
+## standard drawing
+
+So yes I have a standard for this as well here it is.
+
+```js
+
+// standard drawing
+var draw = {
+
+  x: 160, // Y
+  y: 120, // X
+  w: 160, // Width
+  h: 160, // Height
+  a: 1, // Angle
+  p: [-100, -100, 100, -100, 100, 100], // Points
+  c: true, // Close
+  l: true, // fiLl
+  i: 3, // lIne wIdth
+  s: '#ffffff', // Stroke
+  f: '#8a0000' // Fill
+
+};
+```
+
 The "stbx" standard is used here in mf_canvas, as well as in any other project that has to do with the storage, and manipulation of a stranded box.
 
 ## Basic rotation demo
