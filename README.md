@@ -92,9 +92,9 @@ just a clear screen method
 C.cls('#808080');
 ```
 
-### C.dBX(stbx, debug)
+### C.dBX(stbx, debug,cr)
 
-Draw the given standard box to the canvas.
+Draw the given standard box to the canvas. Set debug to true, to see debug info, and cr to true to make it render the box 'center relative';
 
 ```js
 C.dBX({
@@ -112,7 +112,7 @@ s: '#080808', // stroke style
 f: '#008a00', // fill style
 i: 3
 
-}, true);
+}, true,true);
 ```
 
 ### C.drawInfo(messArray, x, y, dy, font, style)
