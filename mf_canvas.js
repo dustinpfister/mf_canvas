@@ -78,17 +78,28 @@ var C = (function () {
         },
 
         // draw an 'standard_box'
-        dBX : function (obj, debug) {
+        dBX : function (obj, debug, cr) {
 
             ctx.fillStyle = obj.f;
             ctx.strokeStyle = obj.s;
             ctx.lineWidth = obj.i;
 
             ctx.save();
-            ctx.translate(obj.x, obj.y);
-            ctx.rotate(obj.a);
+
+            if (cr) {
+
+                // draw center relative
+                ctx.translate(obj.x, obj.y);
+
+            } else {
+
+                ctx.translate(obj.x + obj.hw, obj.y + obj.hh);
+
+            }
+
             ctx.fillRect(-obj.hw, -obj.hh, obj.w, obj.h);
             ctx.strokeRect(-obj.hw, -obj.hh, obj.w, obj.h);
+
             ctx.restore();
 
             if (debug) {
