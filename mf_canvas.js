@@ -1,3 +1,12 @@
+/*
+
+changes from 0.1.2
+
+ * fixed rotation problem with C.dBx
+
+
+ */
+
 var C = (function () {
 
     var canvas = document.createElement('canvas'),
@@ -96,6 +105,8 @@ var C = (function () {
                 ctx.translate(obj.x + obj.hw, obj.y + obj.hh);
 
             }
+
+            ctx.rotate(obj.a);
 
             ctx.fillRect(-obj.hw, -obj.hh, obj.w, obj.h);
             ctx.strokeRect(-obj.hw, -obj.hh, obj.w, obj.h);
