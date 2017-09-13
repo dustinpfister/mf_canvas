@@ -1,12 +1,3 @@
-/*
-
-changes from 0.1.2
-
- * fixed rotation problem with C.dBx
-
-
- */
-
 var C = (function () {
 
     var canvas = document.createElement('canvas'),
@@ -23,6 +14,9 @@ var C = (function () {
         // ref to canvas if needed
         canvas : canvas,
 
+        // ref to context
+        ctx : ctx,
+
         cls : function (style) {
 
             ctx.fillStyle = style || '#000000';
@@ -33,6 +27,37 @@ var C = (function () {
         hiDraw : function (draw) {
 
             draw.call(this, ctx, canvas)
+
+        },
+
+        drawGrid : function (offX, offY, w, h, pw, ph) {
+
+            w = w || 8;
+            h = h || 8;
+            pw = pw || 32;
+            ph = ph || 32;
+            offX = offX || 0;
+            offY = offY || 0;
+
+            ctx.strokeStyle = 'rgba(255,255,255,.2)';
+            ctx.lineWidth = 3;
+
+            var y = -ph * 2,
+            x;
+            while (y < h * ph) {
+
+                x = -pw * 2;
+                while (x < w * pw) {
+
+                    ctx.strokeRect(x + offX, y + offY, pw, ph);
+
+                    x += pw;
+
+                }
+
+                y += ph;
+
+            }
 
         },
 
