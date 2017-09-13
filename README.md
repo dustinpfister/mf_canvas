@@ -215,8 +215,16 @@ C.hiDraw(function (ctx, canvas) {
 });
 ```
 
+### C.drawGrid(offX, offY, w, h, pw, ph)
+
+useful for just quickly drawing a grid on the canvas. w, an h are the cell or tile width and height, while pw, and ph are the pixel width and height.
+
 ## The props
 
 C.canvas
 
 Just a reference to the single canvas I made sure to put this in so that if something comes up that presents a need to get to it, it's there. However if I end up using it a lot that is a good indication that I need to develop this more.
+
+C.ctx
+
+This is just a straight reference to the single drawing context, of the single canvas that this project uses.
